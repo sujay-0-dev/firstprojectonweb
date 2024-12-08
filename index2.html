@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTC Admin Dashboard</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h1 class="logo">TransitAI</h1>
+            <nav>
+                <a href="#" class="nav-item active" data-tab="schedule">
+                    <i data-feather="calendar"></i>
+                    Bus Scheduling
+                </a>
+                <a href="#" class="nav-item" data-tab="routes">
+                    <i data-feather="map"></i>
+                    Route Management
+                </a>
+                <a href="#" class="nav-item" data-tab="crew">
+                    <i data-feather="users"></i>
+                    Crew Management
+                </a>
+                <a href="#" class="nav-item" data-tab="profile">
+                    <i data-feather="user"></i>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h2>Scheduler Dashboard</h2>
+                <div class="search-bar">
+                    <i data-feather="search"></i>
+                    <input type="search" placeholder="Search...">
+                </div>
+                <div class="user-actions">
+                    <button><i data-feather="bell"></i></button>
+                    <button><i data-feather="log-out"></i></button>
+                </div>
+            </header>
+            <div class="dashboard-content">
+                <section id="schedule" class="tab-content active">
+                    <h3>Bus Scheduling</h3><br>
+                    <form id="schedule-form">
+                        <input type="text" placeholder="Bus Number" required>
+                        <input type="text" placeholder="Route" required>
+                        <input type="datetime-local" placeholder="Departure Time" required>
+                        <input type="datetime-local" placeholder="Arrival Time" required>
+                        <button type="submit">Add Schedule</button>
+                    </form>
+                    <table id="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Bus Number</th>
+                                <th>Route</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </section>
+                <section id="routes" class="tab-content">
+                    <h3>Route Management</h3><br>
+                    <form id="route-form">
+                        <input type="text" placeholder="Route Number" required>
+                        <input type="text" placeholder="Start Point" required>
+                        <input type="text" placeholder="End Point" required>
+                        <input type="text" placeholder="Stops (comma-separated)" required>
+                        <button type="submit">Add Route</button>
+                    </form>
+                    <table id="route-table">
+                        <thead>
+                            <tr>
+                                <th>Route Number</th>
+                                <th>Start Point</th>
+                                <th>End Point</th>
+                                <th>Stops</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </section>
+                <section id="crew" class="tab-content">
+                    <h3>Crew Management</h3><br>
+                    <form id="crew-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Role (Driver/Conductor)" required>
+                        <input type="text" placeholder="Employee ID" required>
+                        <input type="text" placeholder="Assigned BUS No" required>
+                        <button type="submit">Add Crew Member</button>
+                    </form>
+                    <table id="crew-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Employee ID</th>
+                                <th>Assigned Bus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </section>
+                 <!-- Profile Section -->
+               <section id="profile" class="tab-content">
+                <div class="profile-section">
+                    <h3>Scheduler Profile</h3>
+                    <div class="profile-details">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Employee ID:</strong> D12345</p>
+                        <p><strong>Contact:</strong> 9876543210</p>
+                         <p><strong>Email:</strong> johndoe@example.com</p>
+                        <p><strong>Assigned Depo:</strong> DN 01 AB 1234</p>
+                        <div class="profile-actions">
+                            <button id="edit-profile-button" class="profile-action-btn">Edit Profile</button>
+                        </div>
+                    </div>
+
+                    <form id="edit-profile-form" class="edit-profile-form" style="display: none;">
+                        <label for="edit-name">Name:</label>
+                        <input type="text" id="edit-name" value="John Doe" required><br>
+
+                        <label for="edit-contact">Contact:</label>
+                        <input type="text" id="edit-contact" value="9876543210" required><br>
+
+                        <label for="edit-email">Email:</label>
+                        <input type="email" id="edit-email" value="johndoe@example.com" required><br>
+
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </section>
+            </div>
+        </main>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
+

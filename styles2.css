@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --sidebar-bg: #34495e;
+    --text-color: #333;
+    --text-light: #ecf0f1;
+    --border-color: #bdc3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    padding: 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+/* User Actions (Logout & Notification) */
+.user-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-actions button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 2rem; /* Increased font size */
+    margin-left: 25px; /* Space between buttons */
+    cursor: pointer;
+  }
+  
+  .user-actions button:hover {
+    color: #007bff; /* Change color on hover */
+  }
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item i {
+    margin-right: 0.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    margin-left: 0.5rem;
+    outline: none;
+}
+
+.user-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.dashboard-content {
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input, select, button {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  /* Profile Section Styling */
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #ebeeef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.profile-section h3 {
+    font-size: 21px; /* Increased profile section header size */
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: left;
+}
+
+.profile-details, .edit-profile-form {
+    width: 100%;
+    max-width: 700px; /* Made form wider for easier readability */
+    padding: 25px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-size: 1.0rem; /* Increased profile text size */
+    margin: 15px 0;
+}
+
+.profile-details strong {
+    font-weight: bold;
+}
+
+.edit-profile-form label {
+    display: block;
+    font-size: 1.0rem; /* Larger label font size */
+    margin-bottom: 12px;
+}
+
+.edit-profile-form input, .edit-profile-form textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for inputs */
+    margin-bottom: 18px;
+    border-radius: 5px;
+    border: 1px solid #a99191;
+    font-size: 1.3rem; /* Increased input font size */
+}
+
+.edit-profile-form button {
+    background-color: #007bff;
+    color: #050505;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 5px;
+    font-size: 1.0rem; /* Increased button font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-form button:hover {
+    background-color: #0056b3;
+}
+
+.profile-action-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 16px; /* Increased padding */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increased button font size */
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-action-btn:hover {
+    background-color: #0056b3;
+} 
